@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+a:hover {
+	color: #FAAA17;
+	/* text-decoration: underline; */
+}
+.divBox {
+background-color: #9eadba;
+height: 30px;
+padding-top: 0px;
+}
+
