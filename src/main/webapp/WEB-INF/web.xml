@@ -4,4 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>abc</servlet-name>
+    <servlet-class>com.amazon.smartstore.api.client.servlet.InitiateChargeRequestSMS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>abc</servlet-name>
+    <url-pattern>/processCharge</url-pattern>
+  </servlet-mapping>
 </web-app>

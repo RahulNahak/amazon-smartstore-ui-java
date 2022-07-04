@@ -45,57 +45,223 @@ cursor: pointer;
 	<br>
 	<br>
 
-	<form action="/Amazon-Web/processCharge" method="POST" name="form1">
+	<form action="/amazon-smat-store-ui-java/processCharge" method="GET" name="form1" id="processCharge">
 		<div>
-		<div
-			style="width: 40%; float: left;   margin: 10px; border-width: 1.75px; border-style: solid; border-color: #C8C8C8;">
-			<span style="font-family: 'Roboto', sans-serif; "><b>List of all
-				Parameters</b></span><br><br>
-				Phone number&nbsp;<br><input type="text" name="phoneNumber" value="8976698602"><br><br>
-				Amount:&nbsp;<br><input type="number" name="amount" value="10000" required><br><br>
-				Sandbox:&nbsp;<br><input type="text" name="Sandbox" value="Y" required><br><br>
+			<div style="width: 40%; float: left;   margin: 10px; border-width: 1.75px; border-style: solid; border-color: #C8C8C8;">
+
+				<span style="font-family: 'Roboto', sans-serif; ">
+					<label>
+						<b>List of all Parameters</b>
+					</label>
+				</span><br><br>
+				
+				<!-- Header -->
+
+				<label>Merchant ID:</label>&nbsp;<br>
+				<input type="text" name="merchantId" value="MERCH_4321"><br><br>
+
+				<!-- Header ends here -->
+				
+				<label>Amount:</label>&nbsp;<br>
+				<input type="number" name="amount" value="11000" required><br><br>
+
+				<label>Currenct Code:</label>&nbsp;<br>
+				<input type="text" name="currencyCode" value="INR" required><br><br>
+
+				<label>Merchant Transaction ID:</label>&nbsp;<br>
+				<input type="text" name="merchantTransactionId" value="SNS_R_1146787" required><br><br>
+
+				<label>Signature Method:</label>&nbsp;<br>
+				<input type="text" name="signatureMethod" value="HmacSHA384" required><br><br>
+
+				<label>Signature Version:</label>&nbsp;<br>
+				<input type="text" name="signatureVersion" value="4" required><br><br>
+
+				<label>Access Key ID:</label>&nbsp;<br>
+				<input type="text" name="accessKeyId" value="ACCESS_1234" required><br><br>
+
+				<label>customerFriendlyBillPageMessage:</label>&nbsp;<br>
+				<input type="text" name="customerFriendlyBillPageMessage" value="Thanks for shopping with us, Please visit again!"><br><br>
+
+				<label>transactionTimeout:</label>&nbsp;<br>
+				<input type="number" name="transactionTimeout" value="900" required><br><br>
+
+				<label>Sandbox:</label>&nbsp;<br>
+				<select name="sandbox" id="">
+					<option value="true"> True </option>
+					<option value="false"> False </option>
+				</select><br><br>
+
+				<label>isLoyalCustomer:</label>&nbsp;<br>
+				<select name="isLoyalCustomer" id="">
+					<option value="true"> True </option>
+					<option value="false"> False </option>
+				</select><br><br>
+
+				<!-- Store Details-->
+				
 				<span style="font-family: 'Roboto', sans-serif; border: #C8C8C8; ">
-				<b>Catalogue details</b></span><br><br>
-				skuCode:&nbsp;<br><input type="number" name="skuCode" value="3126326" required><br><br>
-				ASIN:&nbsp;<br><input type="number" name="ASIN" value="34284771" required><br><br>
-				unitPrice:&nbsp;<br><input type="number" name="unitPrice" value="3" required><br><br>
-				brand:&nbsp;<br><input type="text" name="brand" value="Samsung" required><br><br>
-				productNote:&nbsp;<br><input type="text" name="productNote" value="Mobile" required><br><br>
-				uniqueIdentifierStatus:&nbsp;<br><input type="text" name="uniqueIdentifierStatus" value="Valid" required><br><br>
-				uniqueIdentifierType:&nbsp;<br><input type="text" name="uniqueIdentifierType" value="Flag" required><br><br>
-				uniqueIdentifier:&nbsp;<br><input type="text" name="uniqueIdentifier" value="Flag" required><br><br>
-				customerFriendlyBillPageMessage:&nbsp;<br><input type="number" name="customerFriendlyBillPageMessage" value="75742" required><br><br>
-				transactionTimeout:&nbsp;<br><input type="text" name="transactionTimeout:" value="180" required><br><br>
-				isLoyalCustomer:&nbsp;<br><input type="text" name="isLoyalCustomer" value="Y" required><br><br>
-		
-		<br>
+					<label>
+						<b>Store details</b>
+					</label>
+				</span><br><br>
+				
+				<label>Store ID:</label>&nbsp;<br>
+				<input type="text" name="storeId" value="STORE_ID_1234" required><br><br>
+
+				<label>Store ID Type:</label>&nbsp;<br>
+				<input type="text" name="storeIdType" value="MERCHANT_STORE_ID" required><br><br>
+
+				<label>Terminal ID:</label>&nbsp;<br>
+				<input type="text" name="terminalId" value="TERMINAL_ID_1234" required><br><br>
+
+				<label>Store Name:</label>&nbsp;<br>
+				<input type="text" name="storeName" value="MURGAN STORES CHENNAI" required><br><br>
+
+				<label>Brand:</label>&nbsp;<br>
+				<input type="text" name="brand" value="MURGAN_STORES" required><br><br>
+
+				<!-- Store Details ends here -->
+
+				<!-- Customer Details -->
+				
+				<span style="font-family: 'Roboto', sans-serif; border: #C8C8C8; ">
+					<label>
+						<b>Customer details</b>
+					</label>
+				</span><br><br>
+
+				<label>Phone Number:</label>&nbsp;<br>
+				<input type="number" name="phoneNumber"><br><br>
+
+				<!-- Customer Details ends here -->
+
+				<!-- Catalogue Details -->
+
+				<span style="font-family: 'Roboto', sans-serif; border: #C8C8C8; ">
+					<label>
+						<b>Catalogue details</b>
+					</label>
+				</span><br><br>
+
+				<div id="catalogue0">
+					<label>skuCode:</label>&nbsp;<br>
+					<input type="text" name="skuCode0"><br><br>
+
+					<label>Title:</label>&nbsp;<br>
+					<input type="text" name="title0"><br><br>
+
+					<label>ASIN:</label>&nbsp;<br>
+					<input type="text" name="asin0"><br><br>
+
+					<label>Product Note:</label>&nbsp;<br>
+					<input type="text" name="productNote0"><br><br>
+
+					<label>Unit Price:</label>&nbsp;<br>
+					<input type="number" name="unitPrice0" required><br><br>
+
+					<label>Quantity:</label>&nbsp;<br>
+					<input type="text" name="quantity0" required><br><br>
+
+					<label>Brand:</label>&nbsp;<br>
+					<input type="text" name="brand0"><br><br>
+
+					<label>Unique Identifier Status:</label>&nbsp;<br>
+					<input type="text" name="uniqueIdentifierStatus0"><br><br>
+
+					<label>Unique Identifier Type:</label>&nbsp;<br>
+					<input type="text" name="uniqueIdentifierType0"><br><br>
+
+					<label>Unique Identifier:</label>&nbsp;<br>
+					<input type="text" name="uniqueIdentifier0"><br><br>
+				
+				<div id="catalogues">
+					
+				</div>
+						
+				</div>		
+				<button type="button" onclick="add_more_catalogue()">Add Catalogue (+)</button>&nbsp;&nbsp;&nbsp;
+				<button type="button" onclick="delete_catalogue()">Remove Catalogue (-)</button>
+
+					
+				<!-- Catalogue Details ends here -->
+			</div>
+			<div
+				style="width: 50%; height:300px; float: right;  border: #C8C8C8; border-width: 1.75px; border-style: solid; margin: 10px">
+				<span style="font-family: 'Roboto', sans-serif;"><b>Request</b></span><br><br>
+				<span id="request" style="word-break: break-word;">Request here</span>
+			</div>
+			
+			<div
+				style="width: 50%; height:300px; float: right;  border: #C8C8C8; border-width: 1.75px; border-style: solid; margin: 10px">
+				<span style="font-family: 'Roboto', sans-serif;"><b>Response</b></span><br><br>
+				<span id="response" style="word-break: break-word;">Response here</span>
+			</div>
 		</div>
-		<div
-			style="width: 50%; height:300px; float: right;  border: #C8C8C8; border-width: 1.75px; border-style: solid; margin: 10px">
-			<span style="font-family: 'Roboto', sans-serif;"><b>Request</b></span><br><br>
-			<span id="request" style="word-break: break-word;">Request here</span>
-		</div>
-		
-		<div
-			style="width: 50%; height:300px; float: right;  border: #C8C8C8; border-width: 1.75px; border-style: solid; margin: 10px">
-			<span style="font-family: 'Roboto', sans-serif;"><b>Response</b></span><br><br>
-			<span id="response" style="word-break: break-word;">Response here</span>
-		</div>
-</div>
 		<input type="submit" value="Send Payment Link" class="button">
 	</form>
 </body>
 <script>
-<%
-String jsonRequest=(String)session.getAttribute("jsonRequest");
-String jsonResponse=(String)session.getAttribute("jsonResponse");
-%>
-var jsonRequest='<%= jsonRequest%>';
-var jsonResponse='<%= jsonResponse%>';
+	<%
+	String jsonRequest=(String)session.getAttribute("jsonRequest");
+	String jsonResponse=(String)session.getAttribute("jsonResponse");
+	%>
+	var jsonRequest='<%= jsonRequest%>';
+	var jsonResponse='<%= jsonResponse%>';
 
-document.getElementById("request").innerHTML = jsonRequest;
-document.getElementById("response").innerHTML = jsonResponse;
+	document.getElementById("request").innerHTML = jsonRequest;
+	document.getElementById("response").innerHTML = jsonResponse;
 
-console.log(s);
+	var counter = 0;
+	function add_more_catalogue() {
+		counter+=1;
+		html = `<hr id="hr${counter}">
+				<div id="catalogue${counter}">
+					<label>skuCode:</label>&nbsp;<br>
+					<input type="text" name="skuCode${counter}"><br><br>
+
+					<label>Title:</label>&nbsp;<br>
+					<input type="text" name="title${counter}"><br><br>
+
+					<label>ASIN:</label>&nbsp;<br>
+					<input type="text" name="asin${counter}"><br><br>
+
+					<label>Product Note:</label>&nbsp;<br>
+					<input type="text" name="productNote${counter}"><br><br>
+
+					<label>Unit Price:</label>&nbsp;<br>
+					<input type="number" name="unitPrice${counter}" required><br><br>
+
+					<label>Quantity:</label>&nbsp;<br>
+					<input type="text" name="quantity${counter}" required><br><br>
+
+					<label>Brand:</label>&nbsp;<br>
+					<input type="text" name="brand${counter}"><br><br>
+
+					<label>Unique Identifier Status:</label>&nbsp;<br>
+					<input type="text" name="uniqueIdentifierStatus${counter}"><br><br>
+
+					<label>Unique Identifier Type:</label>&nbsp;<br>
+					<input type="text" name="uniqueIdentifierType${counter}"><br><br>
+
+					<label>Unique Identifier:</label>&nbsp;<br>
+					<input type="text" name="uniqueIdentifier${counter}"><br><br>	
+				</div>`;
+
+		const form = document.getElementById("catalogues");
+		form.innerHTML+=html;
+	}
+
+	function delete_catalogue() {
+		if(counter > 0) {
+			const element = document.getElementById(`catalogue${counter}`);
+			element.remove();
+			const hrId = document.getElementById(`hr${counter}`);
+			hrId.remove();
+			counter--;
+		}
+	}
+
+
 </script>
 </html>
