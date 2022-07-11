@@ -45,7 +45,7 @@ cursor: pointer;
 	<br>
 	<br>
 
-	<form action="/SmartStore/paymentStatus" method="Get" name="form1">
+	<form action="/amazon-smat-store-ui-java/paymentStatus" method="Get" name="form1">
 		<div>
 		<div
 			style="width: 40%; float: left;   margin: 10px; border-width: 1.75px; border-style: solid; border-color: #C8C8C8;">
@@ -62,19 +62,19 @@ cursor: pointer;
 
 			<!-- Header ends here -->
 
-			<label>Transaction ID Type :</label>&nbsp;<br>
+			<label>Transaction ID Type:</label>&nbsp;<br>
 			<input type="text" name="transactionIdType" value="MERCHANT_TXN_ID" required><br><br>
 
-			<label>Transaction ID :</label>&nbsp;<br>
+			<label>Transaction ID:</label>&nbsp;<br>
 			<input type="text" name="transactionId" required><br><br>
 
-			<label>Signature Method :</label>&nbsp;<br>
+			<label>Signature Method:</label>&nbsp;<br>
 			<input type="text" name="signatureMethod" required><br><br>
 
-			<label>Signature Version :</label>&nbsp;<br>
+			<label>Signature Version:</label>&nbsp;<br>
 			<input type="text" name="signatureVersion" required><br><br>
 
-			<label>Access Key ID :</label>&nbsp;<br>
+			<label>Access Key ID:</label>&nbsp;<br>
 			<input type="text" name="accessKeyId" required><br><br>
 				
 		<br>
