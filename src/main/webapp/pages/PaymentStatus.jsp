@@ -41,7 +41,7 @@ cursor: pointer;
 		<span style="font-family: 'Roboto', sans-serif;"><b>Get Payment Status</b></span><br>
 	</div>
 	<input type="text" readonly name="path"
-		value="API: /v1/smart-store/payment/token/SMS" style="width: 250px;">
+		value="API: /v1/smart-store/payment/charge/status" style="width: 250px;">
 	<br>
 	<br>
 
@@ -49,14 +49,33 @@ cursor: pointer;
 		<div>
 		<div
 			style="width: 40%; float: left;   margin: 10px; border-width: 1.75px; border-style: solid; border-color: #C8C8C8;">
-			<span style="font-family: 'Roboto', sans-serif; "><b>List of all
-				Parameters</b></span><br><br>
-				Merchant ID&nbsp;<br><input type="text" name="merchandId" value="1234ABCD"><br><br>
-				Transaction ID Type&nbsp;<br><input type="text" name="transactionIdType" value="MERCHANT_TXN_ID" required><br><br>
-				Transaction ID&nbsp;<br><input type="text" name="transactionId" value="TRAN456" required><br><br>
-				Signature Method&nbsp;<br><input type="text" name="signatureMethod" value="HmacSHA384" required><br><br>
-				Signature Version&nbsp;<br><input type="text" name="signatureVersion" value="4" required><br><br>
-				Access Key ID&nbsp;<br><input type="text" name="accessKeyId" value="AK123" required><br><br>
+			<span style="font-family: 'Roboto', sans-serif; ">
+				<label>
+					<b>List of all Parameters</b>
+				</label>
+			</span><br><br>
+
+			<!-- Header -->
+
+			<label>Merchant ID:</label>&nbsp;<br>
+			<input type="text" name="merchantId" value="MERCH_4321" required><br><br>
+
+			<!-- Header ends here -->
+
+			<label>Transaction ID Type :</label>&nbsp;<br>
+			<input type="text" name="transactionIdType" value="MERCHANT_TXN_ID" required><br><br>
+
+			<label>Transaction ID :</label>&nbsp;<br>
+			<input type="text" name="transactionId" required><br><br>
+
+			<label>Signature Method :</label>&nbsp;<br>
+			<input type="text" name="signatureMethod" required><br><br>
+
+			<label>Signature Version :</label>&nbsp;<br>
+			<input type="text" name="signatureVersion" required><br><br>
+
+			<label>Access Key ID :</label>&nbsp;<br>
+			<input type="text" name="accessKeyId" required><br><br>
 				
 		<br>
 		</div>
