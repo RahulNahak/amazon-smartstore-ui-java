@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,7 +36,7 @@ public class InitiateChargeRequestSMS extends HttpServlet {
 
         } catch (SmartStoreClientException e) {
             e.printStackTrace();
-        } catch (URISyntaxException e) {
+        } catch (URISyntaxException | GeneralSecurityException e) {
             e.printStackTrace();
         }
 

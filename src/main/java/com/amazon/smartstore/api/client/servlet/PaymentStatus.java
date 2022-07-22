@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.security.GeneralSecurityException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,6 +36,8 @@ public class PaymentStatus extends HttpServlet {
         } catch (SmartStoreClientException e) {
             e.printStackTrace();
         } catch (URISyntaxException e) {
+            e.printStackTrace();
+        } catch (GeneralSecurityException e) {
             e.printStackTrace();
         }
 
