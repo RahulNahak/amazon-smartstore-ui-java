@@ -41,28 +41,52 @@ cursor: pointer;
 		<span style="font-family: 'Roboto', sans-serif;"><b>Send Refund Link</b></span><br>
 	</div>
 	<input type="text" readonly name="path"
-		value="API: /v1/smart-store/payment/token/SMS" style="width: 250px;">
+		value="API: /payment/refund/v1" style="width: 250px;">
 	<br>
 	<br>
 
-	<form action="/SmartStore/initiateRefund" method="POST" name="form1">
+	<form action="/amazon-smat-store-ui-java/initiateRefund" method="GET" name="form1">
 		<div>
 		<div
 			style="width: 40%; float: left;   margin: 10px; border-width: 1.75px; border-style: solid; border-color: #C8C8C8;">
-			<span style="font-family: 'Roboto', sans-serif; "><b>List of all
-				Parameters</b></span><br><br>
-				Merchant ID&nbsp;<br><input type="text" name="merchandId" value="1234ABCD"><br><br>
-				Transaction ID Type&nbsp;<br><input type="text" name="transactionIdType" value="MERCHANT_TXN_ID" required><br><br>
-				Transaction ID&nbsp;<br><input type="text" name="transactionId" value="TRAN456" required><br><br>
-				Amount&nbsp;<br><input type="number" name="amount" value="10000" required><br><br>
-				Currency Code&nbsp;<br><input type="text" name="currencyCode" value="INR" required><br><br>
-				Refund Reference ID&nbsp;<br><input type="text" name="refundReferenceId" value="R123" required><br><br>
-				Seller Note To Customer&nbsp;<br><input type="text" name="refundMessage" value="" required><br><br>
-				Soft Descriptor&nbsp;<br><input type="text" name="softDescriptor" value="" required><br><br>
-				Signature Method&nbsp;<br><input type="text" name="signatureMethod" value="HmacSHA384" required><br><br>
-				Signature Version&nbsp;<br><input type="text" name="signatureVersion" value="4" required><br><br>
-				Access Key ID&nbsp;<br><input type="text" name="accessKeyId" value="AK123" required><br><br>
-				Sandbox&nbsp;<br><input type="text" name="Sandbox" value="Y" required><br><br>
+			<span style="font-family: 'Roboto', sans-serif; "><b>List of all Parameters</b></span><br><br>
+			
+			<label>Merchant ID:</label>&nbsp;
+				<input type="text" name="merchantId" value="10000" required><br><br>
+				
+				<label>Amazon Transaction Id:</label>&nbsp;
+				<input type="text" name="amazonTransactionId" value="TESTORDERID123" required><br><br>
+				
+				<label>Amazon Transaction Id Type:</label>&nbsp;
+				<input type="text" name="amazonTransactionIdType" value="AMAZON_ORDER_ID" required><br><br>
+				
+				<label>Amount:</label>&nbsp;
+				<input type="number" name="amount" value="100" required><br><br>
+				
+				<label>Currency Code:</label>&nbsp;
+				<input type="text" name="currencyCode" value="INR" required><br><br>
+				
+				<label>Refund Reference ID:</label>&nbsp;
+				<input type="text" name="refundReferenceId" value="R123" required><br><br>
+				
+				<label>Seller Note To Customer:</label>&nbsp;
+				<input type="text" name="sellerNoteToCustomer" value="" required><br><br>
+				
+				<label>Soft Descriptor:</label>&nbsp;
+				<input type="text" name="softDescriptor" value="" required><br><br>				
+				
+				<label>Signature Method:</label>&nbsp;
+				<input type="text" name="signatureMethod" value="HmacSHA384" required><br><br>
+				
+				<label>Signature Version:</label>&nbsp;
+				<input type="text" name="signatureVersion" value="4" required><br><br>
+				
+				<label>AccessKey ID:</label>&nbsp;
+				<input type="text" name="accessKeyId" value="412ASDF" required><br><br>
+				
+				<label>Sand Box:</label>&nbsp;
+				<input type="text" name="sandBox" value="false" required><br><br>
+				
 				
 		<br>
 		</div>
