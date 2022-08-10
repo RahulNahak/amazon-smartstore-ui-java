@@ -20,6 +20,14 @@
     <servlet-name>InitiateRefund</servlet-name>
     <servlet-class>com.amazon.smartstore.api.client.servlet.InitiateRefundRequest</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>payment-status</servlet-name>
+    <servlet-class>com.amazon.smartstore.api.client.servlet.PaymentStatus</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>refund-details</servlet-name>
+    <servlet-class>com.amazon.smartstore.api.client.servlet.RefundDetails</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>abc</servlet-name>
     <url-pattern>/processCharge</url-pattern>
@@ -36,4 +44,13 @@
     <servlet-name>InitiateRefund</servlet-name>
     <url-pattern>/initiateRefund</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>payment-status</servlet-name>
+    <url-pattern>/paymentStatus</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>refund-details</servlet-name>
+    <url-pattern>/refundDetails</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
