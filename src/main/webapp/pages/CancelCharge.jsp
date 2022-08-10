@@ -46,17 +46,29 @@ cursor: pointer;
 	<br>
 	<br>
 
-	<form action="/SmartStore/cancelCharge" method="POST" name="form1">
+	<form action="/amazon-smat-store-ui-java/cancelCharge" method="GET" name="form1">
 		<div>
 		<div
 			style="width: 40%; float: left;   margin: 10px; border-width: 1.75px; border-style: solid; border-color: #C8C8C8;">
-			<span style="font-family: 'Roboto', sans-serif; "><b>List of all
-				Parameters</b></span><br><br>
-				Merchant ID:&nbsp;<input type="text" name="merchantId" value="Merchant001"><br><br>
-				Transaction ID:&nbsp;<input type="text" name="transactionId" value="Transac_123"><br><br>
-				Signature Method:&nbsp;<input type="text" name="transactionId" value="HmacSHA384"><br><br>
-				Signature Version:&nbsp;<input type="text" name="transactionId" value="4"><br><br>
-				Transaction ID Type:&nbsp;<input type="text" name="transactionId" value="MERCHANT_TXN_ID"><br><br>
+			<span style="font-family: 'Roboto', sans-serif; "><b>List of all Parameters</b></span><br><br>
+			
+				<label>Merchant ID:</label>&nbsp;
+				<input type="text" name="merchantId" value="10000" required><br><br>
+				
+				<label>Transaction Id:</label>&nbsp;
+				<input type="text" name="transactionId" value="TESTORDERID123" required><br><br>				
+				
+				<label>Signature Method:</label>&nbsp;
+				<input type="text" name="signatureMethod" value="HmacSHA384" required><br><br>
+				
+				<label>Signature Version:</label>&nbsp;
+				<input type="text" name="signatureVersion" value="4" required><br><br>
+				
+				<label>AccessKey ID:</label>&nbsp;
+				<input type="text" name="accessKeyId" value="412ASDF" required><br><br>
+				
+				<label>Transaction Id Type:</label>&nbsp;
+				<input type="text" name="transactionIdType" value="MERCHANT_TXN_ID" required><br><br>
 		
 		<br>
 		</div>

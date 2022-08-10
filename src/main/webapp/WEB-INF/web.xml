@@ -8,8 +8,32 @@
     <servlet-name>abc</servlet-name>
     <servlet-class>com.amazon.smartstore.api.client.servlet.InitiateChargeRequestSMS</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>GenerateQRCode</servlet-name>
+    <servlet-class>com.amazon.smartstore.api.client.servlet.InitiateChargeRequestQR</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CancelCharge</servlet-name>
+    <servlet-class>com.amazon.smartstore.api.client.servlet.InitiateCancelCharge</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>InitiateRefund</servlet-name>
+    <servlet-class>com.amazon.smartstore.api.client.servlet.InitiateRefundRequest</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>abc</servlet-name>
     <url-pattern>/processCharge</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GenerateQRCode</servlet-name>
+    <url-pattern>/generateQRCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CancelCharge</servlet-name>
+    <url-pattern>/cancelCharge</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InitiateRefund</servlet-name>
+    <url-pattern>/initiateRefund</url-pattern>
   </servlet-mapping>
 </web-app>
